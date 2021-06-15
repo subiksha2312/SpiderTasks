@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C69797"
+    tools:context=".SpiFactor">
+
+    <AnalogClock
+
+        android:layout_width="256dp"
+        android:layout_height="163dp"
+        android:layout_marginTop="93dp"
+        android:layout_marginBottom="53dp"
+        android:background="#090808"
+        app:layout_constraintBottom_toTopOf="@+id/timedisplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timedisplay"
+        android:layout_width="296dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="290dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="10dp"
+        android:rotationX="0"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        app:layout_constraintBottom_toTopOf="@+id/spifactor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/spifactor"
+        android:layout_width="352dp"
+        android:layout_height="99dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="139dp"
+        android:layout_marginBottom="232dp"
+        android:background="#0C0C0C"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timedisplay" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CC8E8E"
+    tools:context=".Lorentzfactorcalci">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="369dp"
+        android:layout_height="148dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="50dp"
+        android:background="#CAB0B0"
+        android:text="The Lorentz factor or Lorentz term is a quantity expressing how much the measurements of time, length, and other physical properties change for an object while that object is moving. The expression appears in several equations in special relativity, and it arises in derivations of the Lorentz transformations."
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="361dp"
+        android:layout_height="247dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginBottom="69dp"
+        android:src="@drawable/lorentzmeme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="151dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        android:text="Velocity (m/s)"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toStartOf="@+id/valueV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/valueV"
+        android:layout_width="191dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginRight="37dp"
+        android:layout_marginBottom="110dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.846" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="364dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="103dp"
+        android:layout_marginLeft="103dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginRight="104dp"
+        android:layout_marginBottom="212dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.494" />
+
+    <Button
+        android:id="@+id/Check"
+        android:layout_width="229dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="179dp"
+        android:layout_marginBottom="35dp"
+        android:text="CHECK"
+        app:backgroundTint="#834545"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.777" />
+</androidx.constraintlayout.widget.ConstraintLayout>
