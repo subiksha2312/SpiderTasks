@@ -45,6 +45,11 @@ class LFcalculator : AppCompatActivity() {
 
         var etlf = findViewById(R.id.userlf) as EditText
         var strtext1 = (etlf.text).toString()
+        Toast.makeText(
+            applicationContext,
+            "Please enter the values",
+            Toast.LENGTH_LONG
+        ).show()
         if (strtext.length > 0) {
             if (strtext1.length > 0) {
                 mVelocity = (etvelocity.text).toString().toDouble()
