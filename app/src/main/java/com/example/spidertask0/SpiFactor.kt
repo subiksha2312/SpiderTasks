@@ -1,7 +1,9 @@
 package com.example.spidertask0
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.os.Handler
 import android.util.Log
 import android.widget.TextClock
@@ -14,12 +16,16 @@ import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle
 import java.util.*
 
+
 class SpiFactor : AppCompatActivity() {
     var hrs:Int=0
     var mins:Int=0
     var sec:Int=0
     var spi:Double=0.00
     var factorial: Long=1
+    lateinit var gameTimer: CountDownTimer
+    var millisleft:Long = 90000
+
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,13 +40,19 @@ class SpiFactor : AppCompatActivity() {
         hrs = calendar.get(Calendar.HOUR)
         mins = calendar.get(Calendar.MINUTE)
         sec = calendar.get(Calendar.SECOND)
+        startTimer()
+    /*
         currenttime()
         spifactorcalc()
         var spifactor=findViewById(R.id.spifactor) as TextView
         spifactor.setText("The Spi factor is: $spi")
 
+         */
+
     }
     fun spifactorcalc(){
+        factorial = 1
+
         if(mins==0 && sec==0){
             spi=0.00
         }
@@ -66,5 +78,45 @@ class SpiFactor : AppCompatActivity() {
 
         timer.setText("$hrs:$mins:$sec")
     }
+
+    fun startTimer(){
+        gameTimer=object: CountDownTimer(millisleft,1000){
+            override fun onTick(millisUntilFinished: Long) {
+                millisleft = millisUntilFinished
+                currenttime()
+                ShowSpiFactor()
+            }
+
+            override fun onFinish() {
+                CloseActivity()
+                RestartActivity()
+
+            }
+        }.start()
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        gameTimer.cancel()
+    }
+
+    fun RestartActivity() {
+        val intent = Intent(this, SpiFactor::class.java)
+        startActivity(intent)
+    }
+
+    fun CloseActivity() {
+        this.finish()
+    }
+
+
+    fun ShowSpiFactor() {
+        spifactorcalc()
+        var spifactor=findViewById(R.id.spifactor) as TextView
+        val spiprecision = String.format("%.10f", spi)
+        spifactor.setText("The Spi factor is: $spiprecision")
+    }
+
 
 }

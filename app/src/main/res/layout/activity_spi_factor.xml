@@ -7,18 +7,6 @@
     android:background="#C69797"
     tools:context=".SpiFactor">
 
-    <AnalogClock
-
-        android:layout_width="256dp"
-        android:layout_height="163dp"
-        android:layout_marginTop="93dp"
-        android:layout_marginBottom="53dp"
-        android:background="#090808"
-        app:layout_constraintBottom_toTopOf="@+id/timedisplay"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/timedisplay"
         android:layout_width="296dp"
@@ -51,4 +39,17 @@
         app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/timedisplay" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="317dp"
+        android:layout_height="270dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="42dp"
+        app:layout_constraintBottom_toTopOf="@+id/timedisplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/spifactor" />
 </androidx.constraintlayout.widget.ConstraintLayout>
