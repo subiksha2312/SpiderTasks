@@ -45,11 +45,17 @@ class LFcalculator : AppCompatActivity() {
 
         var etlf = findViewById(R.id.userlf) as EditText
         var strtext1 = (etlf.text).toString()
-        Toast.makeText(
-            applicationContext,
-            "Please enter the values",
-            Toast.LENGTH_LONG
-        ).show()
+
+        if (strtext.isEmpty() or strtext1.isEmpty())  {
+            Toast.makeText(
+                applicationContext,
+                "Please enter a value",
+                Toast.LENGTH_LONG
+            ).show() //if no value is written
+
+
+        }
+
         if (strtext.length > 0) {
             if (strtext1.length > 0) {
                 mVelocity = (etvelocity.text).toString().toDouble()
@@ -105,7 +111,7 @@ class LFcalculator : AppCompatActivity() {
                         applicationContext,
                         "Please enter a velocity lesser than the speed of light",
                         Toast.LENGTH_LONG
-                    ).show() //if the user inputs a peed greater than light
+                    ).show() //if the user inputs a speed greater than light
                 }
             }
         }
